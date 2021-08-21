@@ -1,0 +1,121 @@
+*{
+  
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto Mono', monospace;
+}
+.homepage{
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-areas: ". . . . . . . . . . "
+                        ". . sedans sedans suvs suvs luxury luxury . ."
+                        ". . sedans sedans suvs suvs luxury luxury . ."
+                        " . . . . . . . . . ."
+                        ;
+    height: 100vh;
+    width: 100%;
+}
+.homepage > div{
+    
+    color: #fff;
+    font-size: 25px;
+    padding: 25px;    
+}
+.homepage > div .center{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.homepage > div .center .image img{
+        width: 125px;
+        height: 70px;
+}
+.homepage > div:first-of-type{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.homepage > div:last-of-type{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.homepage > div p{
+    line-height: 1.7;
+    font-size: 20px;
+    color: #dadada;
+}
+.homepage > div h2{
+    font-size: 50px;
+    font-weight: bold;
+    
+}
+.homepage > div button{
+    padding: 10px 30px;
+    background: transparent;
+    color: #fff;
+    font-size: 30px;
+    display: block;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 30px ;
+    align-self: flex-start;
+  
+}
+.homepage > div:first-of-type button:hover{
+background-color: #fff;
+color: #e28525;
+
+}
+.homepage > div:nth-of-type(2) button:hover{
+    background-color: #fff;
+    color: #016972;
+    
+}
+.homepage > div:nth-of-type(3) button:hover{
+    background-color: #fff;
+    color:#00403f;
+    
+    }
+
+.homepage .sedans{
+    background-color: #e28525;
+    grid-area: sedans;
+    padding: 40px;
+
+}
+.homepage .suvs{
+    background-color: #016972;
+    grid-area: suvs;
+    padding: 40px;
+
+}
+.homepage .luxury{
+    background-color: #00403f;
+    grid-area: luxury;
+    padding: 40px;
+
+}
+@media (min-width:567px) and (max-width:767px)
+{
+ .homepage{
+     grid-template-columns: repeat(3,1fr);
+     grid-template-rows: repeat(6,400px);
+    grid-template-areas:
+        " sedans sedans sedans"
+        " sedans sedans sedans"
+        " suvs suvs suvs"
+        " suvs suvs suvs"
+        " luxury luxury luxury"
+        " luxury luxury luxury";
+        
+        ;
+ }   
+}
